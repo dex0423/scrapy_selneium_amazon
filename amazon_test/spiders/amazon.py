@@ -5,7 +5,7 @@ class AmazonSpider(scrapy.Spider):
     name = 'amazon'
     allowed_domains = ['amazon.com']
 
-    keywords = ["cellphone"]
+    keywords = ["cellphone"]        # 此处写入要抓取的关键字
     start_urls = [f'https://www.amazon.com/s?k={keyword}' for keyword in keywords]
 
     def parse(self, response):
